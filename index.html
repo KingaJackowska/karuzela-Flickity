@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="scss/style.scss">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" media="screen">
+    <link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
+    <link rel="stylesheet" href="vendor/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    
+        <a href="#carousel-cell1">View cell 1</a>
+        <a href="#carousel-cell2">View cell 2</a>
+        <a href="#carousel-cell3">View cell 3</a>
+        <a href="#carousel-cell4">View cell 4</a>
+        <a href="#carousel-cell5">View cell 5</a>
+    
     <div class="container">
-        <div class="main-carousel">
-            <div class="carousel-cell style">1</div>
-            <div class="carousel-cell style">2</div>
-            <div class="carousel-cell style">3</div>
-            <div class="carousel-cell style">4</div>
-            <div class="carousel-cell style">5</div>
+        <div class="main-carousel carousel" data-flickity='{ "cellAlign": "left", "hash": true, "contain": true }'>
+            <div class="carousel-cell style" id="carousel-cell1">1</div>
+            <div class="carousel-cell style" id="carousel-cell2">2</div>
+            <div class="carousel-cell style" id="carousel-cell3">3</div>
+            <div class="carousel-cell style" id="carousel-cell4">4</div>
+            <div class="carousel-cell style" id="carousel-cell5">5</div>
         </div>    
     </div>
 
-    <script src="/path/to/flickity.pkgd.min.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<script src="vendor/flickity.pkgd.min.js"></script>
+<script src="js/hash.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
