@@ -1,0 +1,22 @@
+.main-carousel {
+    
+}
+
+.carousel-cell {
+    width: 100%; /* full width */
+    height: 50vh; /* height of carousel */
+    min-height: 250px;
+    margin-right: 10px;
+    overflow: auto;
+    background-color: #f50;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.style {
+    background-image: url();
+    background-size: cover;
+}

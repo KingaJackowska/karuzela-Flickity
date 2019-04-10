@@ -1,0 +1,349 @@
+/ *! normalize.css v8.0.1 | Licencja MIT | github.com/necolas/normalize.css * /
+
+/ * Dokument
+   ================================================== ======================== * /
+
+/ **
+ * 1. Popraw wysokoœæ linii we wszystkich przegl¹darkach.
+ * 2. Zapobiegaj zmianom rozmiaru czcionki po zmianie orientacji w iOS.
+ * /
+
+html {
+  line-height: 1.15; / * 1 * /
+  -webkit-text-size-adjust: 100%; / * 2 * /
+}
+
+/* Sekcje
+   ================================================== ======================== * /
+
+/ **
+ * Usuñ margines we wszystkich przegl¹darkach.
+ * /
+
+cia³o {
+  margines: 0;
+}
+
+/ **
+ * Renderuj element `main` konsekwentnie w IE.
+ * /
+
+G³ówny {
+  Blok wyœwietlacza;
+}
+
+/ **
+ * Popraw rozmiar czcionki i margines na elementach `h1` w` section` i
+ * konteksty `` article` w Chrome, Firefox i Safari.
+ * /
+
+h1 {
+  rozmiar czcionki: 2em;
+  margines: 0,67em 0;
+}
+
+/ * Grupowanie treœci
+   ================================================== ======================== * /
+
+/ **
+ * 1. Dodaj poprawny rozmiar skrzynki w Firefoksie.
+ * 2. Poka¿ przepe³nienie w Edge i IE.
+ * /
+
+hr {
+  wielkoœæ pude³ka: zawartoœæ; / * 1 * /
+  wysokoœæ: 0; / * 1 * /
+  przepe³nienie: widoczne; / * 2 * /
+}
+
+/ **
+ * 1. Popraw dziedziczenie i skalowanie rozmiaru czcionki we wszystkich przegl¹darkach.
+ * 2. Popraw niepoprawn¹ wielkoœæ czcionki `em` we wszystkich przegl¹darkach.
+ * /
+
+pre {
+  font-family: monospace, monospace; / * 1 * /
+  rozmiar czcionki: 1em; / * 2 * /
+}
+
+/ * Semantyka na poziomie tekstu
+   ================================================== ======================== * /
+
+/ **
+ * Usuñ szare t³o na aktywnych linkach w IE 10.
+ * /
+
+{
+  kolor t³a: przezroczysty;
+}
+
+/ **
+ * 1. Usuñ doln¹ ramkê w Chrome 57-
+ * 2. Dodaj poprawn¹ dekoracjê tekstu w Chrome, Edge, IE, Opera i Safari.
+ * /
+
+abbr [tytu³] {
+  border-bottom: none; / * 1 * /
+  dekoracja tekstu: podkreœlenie; / * 2 * /
+  text-decoration: podkreœlenie kropkowane; / * 2 * /
+}
+
+/ **
+ * Dodaj prawid³ow¹ wagê czcionki w Chrome, Edge i Safari.
+ * /
+
+b,
+silny {
+  font-weight: bolder;
+}
+
+/ **
+ * 1. Popraw dziedziczenie i skalowanie rozmiaru czcionki we wszystkich przegl¹darkach.
+ * 2. Popraw niepoprawn¹ wielkoœæ czcionki `em` we wszystkich przegl¹darkach.
+ * /
+
+kod,
+kbd,
+samp {
+  font-family: monospace, monospace; / * 1 * /
+  rozmiar czcionki: 1em; / * 2 * /
+}
+
+/ **
+ * Dodaj prawid³owy rozmiar czcionki we wszystkich przegl¹darkach.
+ * /
+
+ma³y {
+  rozmiar czcionki: 80%;
+}
+
+/ **
+ * Zapobiegaj wp³ywowi elementów `sub` i` sup` na wysokoœæ linii
+ * wszystkie przegl¹darki.
+ * /
+
+pod,
+sup {
+  rozmiar czcionki: 75%;
+  wysokoœæ linii: 0;
+  pozycja: wzglêdna;
+  vertical-align: baseline;
+}
+
+pod {
+  dó³: -0,25em;
+}
+
+sup {
+  top: -0,5em;
+}
+
+/ * Zawartoœæ osadzona
+   ================================================== ======================== * /
+
+/ **
+ * Usuñ obramowanie na obrazach wewn¹trz linków w IE 10.
+ * /
+
+img {
+  styl graniczny: brak;
+}
+
+/ * Formularze
+   ================================================== ======================== * /
+
+/ **
+ * 1. Zmieñ style czcionek we wszystkich przegl¹darkach.
+ * 2. Usuñ margines w Firefox i Safari.
+ * /
+
+przycisk,
+wk³ad,
+optgroup,
+Wybierz,
+textarea {
+  font-family: dziedzicz; / * 1 * /
+  rozmiar czcionki: 100%; / * 1 * /
+  line-height: 1.15; / * 1 * /
+  margines: 0; / * 2 * /
+}
+
+/ **
+ * Poka¿ przepe³nienie w IE.
+ * 1. Poka¿ przepe³nienie w Edge.
+ * /
+
+przycisk,
+input {/ * 1 * /
+  przepe³nienie: widoczne;
+}
+
+/ **
+ * Usuñ dziedziczenie transformacji tekstu w Edge, Firefox i IE.
+ * 1. Usuñ dziedziczenie transformacji tekstu w Firefoksie.
+ * /
+
+przycisk,
+wybierz {/ * 1 * /
+  text-transform: none;
+}
+
+/ **
+ * Popraw niemo¿noœæ stylizacji klikalnych typów w iOS i Safari.
+ * /
+
+przycisk,
+[type = "button"],
+[type = "reset"],
+[type = "submit"] {
+  -webkit-wygl¹d: przycisk;
+}
+
+/ **
+ * Usuñ wewnêtrzn¹ ramkê i dope³nienie w Firefoksie.
+ * /
+
+button :: - moz-focus-inner,
+[type = "button"] :: - moz-focus-inner,
+[type = "reset"] :: - moz-focus-inner,
+[type = "submit"] :: - moz-focus-inner {
+  styl graniczny: brak;
+  wype³nienie: 0;
+}
+
+/ **
+ * Przywróæ style skupienia, które nie zosta³y ustawione przez poprzedni¹ regu³ê.
+ * /
+
+przycisk: -moz-focusring,
+[type = "button"]: - moz-focusring,
+[type = "reset"]: - moz-focusring,
+[type = "submit"]: - moz-focusring {
+  konspekt: ??1px kropkowany ButtonText;
+}
+
+/ **
+ * Popraw dope³nienie w Firefoksie.
+ * /
+
+Fieldset {
+  dope³nienie: 0.35em 0.75em 0.625em;
+}
+
+/ **
+ * 1. Popraw zawijanie tekstu w Edge i IE.
+ * 2. Popraw dziedziczenie kolorów z elementów `zestawu pól 'w IE.
+ * 3. Usuñ dope³nienie, aby programiœci nie dali siê z³apaæ podczas zerowania
+ * `elementy zestawu pól we wszystkich przegl¹darkach.
+ * /
+
+legenda {
+  wielkoœæ pude³ka: obramowanie; / * 1 * /
+  kolor: dziedziczyæ; / * 2 * /
+  wyœwietlacz: tabela; / * 1 * /
+  maksymalna szerokoœæ: 100%; / * 1 * /
+  wype³nienie: 0; / * 3 * /
+  white-space: normal; / * 1 * /
+}
+
+/ **
+ * Dodaj poprawne wyrównanie pionowe w Chrome, Firefox i Opera.
+ * /
+
+postêp {
+  vertical-align: baseline;
+}
+
+/ **
+ * Usuñ domyœlny pionowy pasek przewijania w IE 10+.
+ * /
+
+textarea {
+  overflow: auto;
+}
+
+/ **
+ * 1. Dodaj poprawny rozmiar skrzynki w IE 10.
+ * 2. Usuñ wype³nienie w IE 10.
+ * /
+
+[type = "checkbox"],
+[type = "radio"] {
+  wielkoœæ pude³ka: obramowanie; / * 1 * /
+  wype³nienie: 0; / * 2 * /
+}
+
+/ **
+ * Popraw styl kursora przycisków zwiêkszania i zmniejszania w Chrome.
+ * /
+
+[type = "number"] :: - webkit-wewnêtrzny-spin-button,
+[type = "number"] :: - webkit-outer-spin-button {
+  height: auto;
+}
+
+/ **
+ * 1. Popraw dziwny wygl¹d w Chrome i Safari.
+ * 2. Popraw styl konspektu w Safari.
+ * /
+
+[type = "search"] {
+  -webkit-pojawienie siê: textfield; / * 1 * /
+  offset konspektu: -2px; / * 2 * /
+}
+
+/ **
+ * Usuñ wewnêtrzne wype³nienie w Chrome i Safari na MacOS.
+ * /
+
+[type = "search"] :: - webkit-search-decoration {
+  -webkit-pojawienie siê: brak;
+}
+
+/ **
+ * 1. Popraw niemo¿noœæ stylizacji klikalnych typów w iOS i Safari.
+ * 2. Zmieñ w³aœciwoœci czcionki na `dziedzicz` w Safari.
+ * /
+
+:: - webkit-file-upload-button {
+  -webkit-wygl¹d: przycisk; / * 1 * /
+  czcionka: dziedziczyæ; / * 2 * /
+}
+
+/ * Interaktywny
+   ================================================== ======================== * /
+
+/ *
+ * Dodaj poprawne wyœwietlanie w Edge, IE 10+ i Firefox.
+ * /
+
+Detale {
+  Blok wyœwietlacza;
+}
+
+/ *
+ * Dodaj poprawne wyœwietlanie we wszystkich przegl¹darkach.
+ * /
+
+streszczenie {
+  display: element listy;
+}
+
+/ * Misc
+   ================================================== ======================== * /
+
+/ **
+ * Dodaj poprawny wyœwietlacz w IE 10+.
+ * /
+
+szablon {
+  Nie wyœwietla siê;
+}
+
+/ **
+ * Dodaj poprawny wyœwietlacz w IE 10.
+ * /
+
+[ukryte] {
+  Nie wyœwietla siê;
+}
