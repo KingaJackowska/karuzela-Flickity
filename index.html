@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" media="screen">
     <link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
     <link rel="stylesheet" href="vendor/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -19,13 +20,19 @@
         <a href="#carousel-cell5">View cell 5</a>
     
     <div class="container">
-        <div class="main-carousel carousel" data-flickity='{ "cellAlign": "left", "hash": true, "contain": true }'>
-            <div class="carousel-cell style" id="carousel-cell1">1</div>
-            <div class="carousel-cell style" id="carousel-cell2">2</div>
-            <div class="carousel-cell style" id="carousel-cell3">3</div>
-            <div class="carousel-cell style" id="carousel-cell4">4</div>
-            <div class="carousel-cell style" id="carousel-cell5">5</div>
-        </div>    
+        <div class="karuzela">
+            <div class="carousel">
+                <div class="carousel-cell style" id="carousel-cell1"><p>1</p></div>
+                <div class="carousel-cell style" id="carousel-cell2"><p>2</p></div>
+                <div class="carousel-cell style" id="carousel-cell3"><p>3</p></div>
+                <div class="carousel-cell style" id="carousel-cell4"><p>4</p></div>
+                <div class="carousel-cell style" id="carousel-cell5"><p>5</p></div>
+            </div>
+            <div class="progress-bar"></div>
+            <div class="button">
+                <a href="#carousel-cell1"><button class="buttonredo"><i class="fas fa-redo-alt redo"></i></button></a>
+            </div>
+        </div>
     </div>
 
 
