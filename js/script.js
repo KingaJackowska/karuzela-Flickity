@@ -26,10 +26,21 @@ var flkty = new Flickity(elem, {
 });
 
 //Pasek stanu pod spodem
-var flkty = new Flickity('.carousel');
 var progressBar = document.querySelector('.progress-bar')
 
 flkty.on( 'scroll', function( progress ) {
     progress = Math.max( 0, Math.min( 1, progress ) );
     progressBar.style.width = progress * 100 + '%';
 });
+
+            // Aktywna mapa przy przewijaniu slajdów
+            
+                /*
+                progress = Math.max( 0, Math.min( 1, progress ) );
+                var actualSlajd = Math.round((myData.length - 1) * progress);
+                */
+               var cellNumber = flkty.selectedIndex
+               var actualId = myData[cellNumber]['coords'];
+               map.panTo(actualId);
+               map.setZoom(9.5);
+               console.log(cellNumber);
