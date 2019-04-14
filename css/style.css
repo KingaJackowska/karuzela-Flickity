@@ -10,7 +10,7 @@
 }
 
 .container {
-  max-width: 400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .container .karuzela .button .buttonredo {
-  index-z: 900;
+  z-index: 900;
   font-size: 30px;
   color: #333333;
   border: none;
@@ -61,7 +61,7 @@ body {
 }
 
 #map {
-  height: 200px;
+  height: 40vh;
   width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

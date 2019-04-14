@@ -13,11 +13,9 @@
 </head>
 <body>
     
-        <a href="#carousel-cell1">View cell 1</a>
-        <a href="#carousel-cell2">View cell 2</a>
-        <a href="#carousel-cell3">View cell 3</a>
-        <a href="#carousel-cell4">View cell 4</a>
-        <a href="#carousel-cell5">View cell 5</a>
+        <a href="#carousel-cell0">View cell 1</a>
+        <a href="#carousel-cell1">View cell 2</a>
+        <a href="#carousel-cell2">View cell 3</a>
     
     <div class="container">
         <div class="karuzela">
@@ -95,9 +93,6 @@
 		    var coords2 = {lat: -25.363, lng: 134.044};
             var coords3 = {lat: -25.363, lng: 137.044};
             var sydney = {lat: -33.874237, lng: 151.198517};
-            var Cell1 = {lat: -24.300, lng: 134.040};
-            var Cell2 = {lat: -24.400, lng: 134.040};
-            var Cell3 = {lat: -24.500, lng: 134.040};
             
             // The map, centered at Uluru
             var cellNumber = flkty.selectedIndex;
@@ -111,9 +106,19 @@
             var marker2 = new google.maps.Marker({position: coords2, map: map});
             var marker3 = new google.maps.Marker({position: coords3, map: map});
             var markerSyd = new google.maps.Marker({position: sydney, map: map});
-            var markerCell1 = new google.maps.Marker({position: Cell1, map: map});
-            var markerCell2 = new google.maps.Marker({position: Cell2, map: map});
-            var markerCell3 = new google.maps.Marker({position: Cell3, map: map});
+
+            //Rozdaje markery
+            var autoMarkers = [];
+
+            for(var i = 0; i < myData.length; i++) {
+            var coords = myData[i]['coords'];
+            autoMarkers[i] = new google.maps.Marker({position: coords, map: map});
+            autoMarkers[i].addListener('click', function() {
+            });
+            }
+
+            //Opisos po kliknięciu
+            var opisos = document.getElementById('opisos');
 
             marker1.addListener('click', function(){
                 opisos.innerHTML = 'Opisos renderos: marker1';
@@ -149,7 +154,6 @@
                 actualCoords = myData[cellNumber]['coords'];
                 map.panTo(actualCoords);
                 map.setZoom(9.5);
-                console.log(cellNumber);
             });
 
 
@@ -157,20 +161,20 @@
 
 
 
-         //Początek funkcji smoothPanAndZoom
-        
-                    var smoothPanAndZoom = function(map, zoom, coords){
-                // Trochę obliczeń, aby wyliczyć odpowiedni zoom do którego ma oddalić się mapa na początku animacji.
-                var jumpZoom = zoom - Math.abs(map.getZoom() - zoom);
-                jumpZoom = Math.min(jumpZoom, zoom -1);
-                jumpZoom = Math.max(jumpZoom, 3);
+            //Początek funkcji smoothPanAndZoom
+    
+                var smoothPanAndZoom = function(map, zoom, coords){
+            // Trochę obliczeń, aby wyliczyć odpowiedni zoom do którego ma oddalić się mapa na początku animacji.
+            var jumpZoom = zoom - Math.abs(map.getZoom() - zoom);
+            jumpZoom = Math.min(jumpZoom, zoom -1);
+            jumpZoom = Math.max(jumpZoom, 3);
 
-                // Zaczynamy od oddalenia mapy do wyliczonego powiększenia. 
-                smoothZoom(map, jumpZoom, function(){
-                    // Następnie przesuwamy mapę do żądanych współrzędnych.
-                    smoothPan(map, coords, function(){
-                        // Na końcu powiększamy mapę do żądanego powiększenia. 
-                        smoothZoom(map, zoom); 
+            // Zaczynamy od oddalenia mapy do wyliczonego powiększenia. 
+            smoothZoom(map, jumpZoom, function(){
+                // Następnie przesuwamy mapę do żądanych współrzędnych.
+                smoothPan(map, coords, function(){
+                    // Na końcu powiększamy mapę do żądanego powiększenia. 
+                    smoothZoom(map, zoom); 
                     });
                 });
             };
@@ -229,14 +233,9 @@
                 }, 1000/30);
             }; 
 
-          // Koniec funkcji smoothPanAndZoom
-
-
-
+            // Koniec funkcji smoothPanAndZoom
 
             }
-
-            var opisos = document.getElementById('opisos');
 
         })();
         </script>
