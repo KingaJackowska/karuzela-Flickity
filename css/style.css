@@ -1,67 +1,19 @@
-.carousel-cell {
-  width: 100%;
-  /* full width */
-  height: 50vh;
-  /* height of carousel */
-  min-height: 250px;
-  margin-right: 10px;
-  overflow: auto;
-  background-color: lightpink;
-}
+.carousel-cell { width: 100%; /* full width */ height: 50vh; /* height of carousel */ min-height: 250px; margin-right: 10px; overflow: auto; background-color: lightpink; }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+.container { max-width: 1200px; margin: 0 auto; }
 
-.karuzela {
-  position: relative;
-}
+.karuzela { position: relative; }
 
-.container .karuzela .button .buttonredo {
-  z-index: 900;
-  font-size: 30px;
-  color: #333333;
-  border: none;
-  border-radius: 5px;
-  padding: 8px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
-}
+.container .karuzela .button .buttonredo { z-index: 900; font-size: 30px; color: #333333; border: none; border-radius: 5px; padding: 8px; position: absolute; top: 20px; right: 20px; background-color: rgba(255, 255, 255, 0.7); }
 
-.container .karuzela .button .buttonredo:hover {
-  background: white;
-  cursor: pointer;
-  opacity: 1;
-}
+.container .karuzela .button .buttonredo:hover { background: white; cursor: pointer; opacity: 1; }
 
-.progress-bar {
-  height: 20px;
-  width: 0;
-  background: #333;
-}
+.progress-bar { height: 20px; width: 0; background: #333; }
 
-.style {
-  background-image: url();
-  background-size: cover;
-}
+.style { background-image: url(); background-size: cover; }
 
-.style p {
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  padding: 15px 0px 15px 0px;
-}
+.style p { color: white; font-size: 20px; text-align: center; padding: 15px 0px 15px 0px; }
 
-body {
-  padding: 10px;
-  text-align: center;
-}
+body { padding: 10px; text-align: center; }
 
-#map {
-  height: 40vh;
-  width: 100%;
-}
-/*# sourceMappingURL=style.css.map */
+#map { height: 40vh; width: 100%; }
